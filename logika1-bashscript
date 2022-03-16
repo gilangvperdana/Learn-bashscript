@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo 'Umur?'
+
+read umur
+
+if [ $umur -ge 17 ]
+then
+    echo 'Kamu boleh punya KTP.'
+else
+    echo 'Kamu belum cukup umur.'
+fi

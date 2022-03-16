@@ -1,0 +1,117 @@
+#!/bin/bash
+
+# PENGGUNAAN :
+# WAJIB MENDIFINISIKAN #!/bin/bash
+# chmod +x learn-bashcript
+# ./learn-bashcript
+
+# Menampilkan tulisan ke layar
+echo "Selamat Datang di Panduan Sederhana Belajar Bash Scripting Linux"
+printf "\n"
+
+# String
+# Merupakan tulisan biasa yang ingin kita tampilan ke layar untuk menampilan ke layar kita bisa gunakan perintah echo lalu di ikuti dengan string atau kalimat yang akan di tampilkan.
+echo Contoh String:
+# Menampilkan string
+echo saya merupakan string tanpa petik #tanpa petik
+echo "saya merupakan string dengan petik" #dengan petik
+printf "\n"
+
+# Menapilkan baris baru string
+printf "saya merupakan string\ndan saya juga string\n"
+printf "\n"
+
+# Variable
+# Variable merupakan tempat yang digunakan untuk menyimpan data di memory komputer data tersebut akan hilang setelah script di jalankan.
+echo Contoh Variable:
+website="gbesar.com" #tidak boleh menggunakan spasi
+echo "Website saya adalah? $website"
+
+# Cara lain memanggil variable
+echo "Website saya adalah? ${website}"
+printf "\n"
+
+# Shell Execution
+# Maksud shell execution adalah menjalankan perintah linux di dalam script.
+echo Contoh Shell Execution :
+echo "Siapa saya? $(whoami)!"
+printf "\n"
+
+# Inputan User
+# Dipembahasan variable kita sudah mendeklarasikan variable menggunakan string tapi kita juga bisa mendeklarasikan variable berdasarkan inputan dari user, contoh program sederhanya adalah ketika kita mau install aplikasi dengan perintah linux selalu di tanya
+echo Contoh Inputan User :
+echo Silahkan eksekusi ./input-bashscript
+printf "\n"
+
+# Operator Perbandingan
+# Operator perbandingan digunakan untuk membandingkan dua nilai atau variable ini sangat penting untuk digabungkan dengan logika 
+echo Contoh Perbandingan Logika :
+echo Silahkan eksekusi ./logika1-bashscript
+printf "\n"
+
+# Pengulangan
+# Pengulangan hampir sama dengan pengulangan pada bahasa program pada umumnya di bash ada 3 jenis pengulangan yaitu:
+# for
+# while
+# until
+
+# Contoh For 1
+echo Contoh Perulangan-for1 :
+for value in {1..5}
+do
+  echo "Perulangan ke-$value"
+done
+
+echo "Selesai"
+printf "\n"
+
+# Contoh For 2
+echo Contoh Perulangan-for2 :
+echo Menampilkan daftar file pada suatu direktori yang ditentukan.
+
+daftarfile=/root/Learn-bashscript/*
+for namafile in $daftarfile
+do
+  echo $(basename $namafile)
+done
+printf "\n"
+
+# Contoh For 3
+angka=1
+while [ $angka -le 10 ]
+do
+  echo "Perulangan while ke-$angka"
+  #penambahan variable angka 1 setiap perulangan
+  ((angka++)) 
+done
+echo "Selesai"
+printf "\n"
+
+# Array
+# Bash array di tentukan menggunakan tanda ( dan ) dan tidak perlu menggunakan koma cukup tambahkan spasi. 
+
+echo Contoh Array :
+#array dengan index
+vokalis=("Anggun" "Afgan" "Rosa" "Ariel")
+
+#print index ke 3
+echo ${vokalis[3]} # output: Rosa
+
+#print semua array
+echo ${vokalis[*]} # output: Aggun Afgan Rosa Ariel
+
+#print index array
+echo ${!vokalis[*]} # output: 0 1 2 3
+
+#tambah array
+vokalis+=(Anji) # tambah anji ke dalam array
+
+#hapus salah satu array
+unset vokalis[0]  # hapus Anggun dari array 
+
+#print jumlah array 
+echo ${#vokalis[*]} # output: 4
+
+echo ${vokalis[*]} # output: Afgan Rosa Ariel Anji
+printf "\n"
+

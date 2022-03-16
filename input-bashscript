@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo Contoh Inputan User :
+echo 'Siapa nama kamu?'
+read namauser
+echo "Halo $namauser salam kenal"
