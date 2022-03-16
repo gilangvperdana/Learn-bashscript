@@ -3,4 +3,6 @@
 # Update Package
 apt update -y
 apt-get full-upgrade -y
-
+printf "\n"
+echo Selesai
+printf "\n"

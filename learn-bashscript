@@ -121,5 +121,6 @@ echo Contoh Multiple Command :
 echo "Mengeksekusi apt update & upgrade"
 echo Silahkan eksekusi ./install-bashscript
 printf "\n"
+
 echo Selesai
 printf "\n"
