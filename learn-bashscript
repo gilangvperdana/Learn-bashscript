@@ -115,3 +115,11 @@ echo ${#vokalis[*]} # output: 4
 echo ${vokalis[*]} # output: Afgan Rosa Ariel Anji
 printf "\n"
 
+# Multiple Command
+# Eksekusi banyak command dengan satu file script
+echo Contoh Multiple Command :
+echo "Mengeksekusi apt update & upgrade"
+echo Silahkan eksekusi ./install-bashscript
+printf "\n"
+echo Selesai
+printf "\n"
